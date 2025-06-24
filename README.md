@@ -37,20 +37,8 @@ Coming soon... (or add your GitHub Pages/Netlify/Vercel link here once deployed)
 
 ## 📫 Contact Me
 
-- 📧 Email: sankareswarim.cse22@nec.edu.in  
+- 📧 Gmail: mk3207587@gmail.com 
 - 💼 LinkedIn: [linkedin.com/in/sankareswari-m](https://www.linkedin.com/in/sankareswari-m/)  
 - 🐙 GitHub: [github.com/SANKARESWARI-M](https://github.com/SANKARESWARI-M)
 
----
 
-## 📷 Preview
-
-![Portfolio Preview](images/preview.png) <!-- Add a screenshot of your portfolio here -->
-
----
-
-## 📌 How to Use
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/SANKARESWARI-M/My-Portfolio.git
