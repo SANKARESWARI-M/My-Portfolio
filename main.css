@@ -687,14 +687,83 @@ body{
 
 
 
-
-
-
-
-
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
 
 
 @media (max-width: 480px) {
+
+   .header {
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(31, 95, 197);
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 60%;
+    padding: 20px;
+    z-index: 999;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  .home {
+    flex-direction: column;
+    padding-top: 120px;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    height: auto;
+  }
+
+  .home-content {
+    margin: 0;
+    padding: 0 15px;
+    max-width: 100%;
+  }
+
+  .home-content h1,
+  .home-content h3,
+  .home-content .greet {
+    font-size: 26px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+  }
+
+  .typewriter {
+    font-size: 18px;
+  }
+
+  .logo-corner {
+    width: 180px;
+    height: 180px;
+  }
+
+  .logo-corner img {
+    width: 100%;
+    height: 100%;
+  }
 
   /* Header and Navbar */
   .header {
