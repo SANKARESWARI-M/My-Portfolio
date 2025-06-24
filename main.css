@@ -684,3 +684,146 @@ body{
 .contact-item a:hover {
   color: #fff;
 }
+
+@media (max-width: 480px) {
+
+  /* Header */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 5%;
+    height: auto;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  /* Home section */
+  .home {
+    flex-direction: column;
+    padding: 50px 5%;
+    text-align: center;
+    height: auto;
+  }
+
+  .home-content {
+    margin-left: 0;
+  }
+
+  .home-content h1,
+  .home-content .greet {
+    font-size: 28px;
+  }
+
+  .home-content h2,
+  .typewriter {
+    font-size: 18px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .logo-corner {
+    width: 70%;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  /* About section */
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about-img img {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .about-heading {
+    font-size: 28px;
+  }
+
+  .about-container {
+    padding: 30px 5%;
+    font-size: 16px;
+  }
+
+  /* Skills section */
+  .skills {
+    padding: 60px 5%;
+    height: auto;
+  }
+
+  .skill-tab-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  .skill-icon-item {
+    width: 70px;
+  }
+
+  .skill-icon-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  /* Projects */
+  .swiper-slide {
+    padding: 0 10px;
+  }
+
+  .project-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .project-content h3 {
+    font-size: 18px;
+  }
+
+  .project-desc {
+    font-size: 14px;
+  }
+
+  /* Contact */
+  .contact {
+    padding: 60px 5%;
+  }
+
+  .contact .section-title {
+    font-size: 28px;
+  }
+
+  .contact-item {
+    font-size: 16px;
+  }
+
+  .contact-item img {
+    width: 24px;
+    height: 24px;
+  }
+}
