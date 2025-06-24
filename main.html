@@ -6,60 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="main.css">
-  <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <script>
-    function showTab(tabId, event) {
-      document.querySelectorAll('.about-container').forEach(tab => tab.style.display = "none")
-      document.getElementById(tabId).style.display = 'block';
-      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-    }
+  <script src="main.js"></script>
 
-    
-  function filterSkills(category, event) {
-    // Remove 'active' from all buttons
-    document.querySelectorAll('.skill-tab-btn').forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-
-    const items = document.querySelectorAll('.skill-icon-item');
-
-    items.forEach(item => {
-      if (category === 'all') {
-        item.style.display = 'flex';
-      } else {
-        item.style.display = item.classList.contains(category) ? 'flex' : 'none';
-      }
-    });
-  }
-document.addEventListener('DOMContentLoaded', function () {
-    const swiper = new Swiper('.projectSwiper', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      loop: false,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        1024: { slidesPerView: 3 },
-        768: { slidesPerView: 2 },
-        480: { slidesPerView: 1 }
-      }
-    });
-  });
-
-
-  </script>
 </head>
 
 <body>
@@ -83,15 +36,12 @@ document.addEventListener('DOMContentLoaded', function () {
       <p>I build responsive web applications with modern UI/UX designs.</p>
 
       <div class="social-icons">
-        <!-- LinkedIn -->
-<a href="https://www.linkedin.com/in/sankareswari-m/" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon" width="40">
-</a>
-
-<!-- GitHub -->
-<a href="https://github.com/SANKARESWARI-M" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Icon" width="40">
-</a>
+        <a href="https://www.linkedin.com/in/sankareswari-m/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon" width="40">
+        </a>
+        <a href="https://github.com/SANKARESWARI-M" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Icon" width="40">
+        </a>
 
       </div>
     </div>
@@ -192,143 +142,159 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   <section class="skills" id="skills">
-  <h2 class="section-title">My <span>Skills</span></h2>
+    <h2 class="section-title">My <span>Skills</span></h2>
 
-  <div class="skill-tabs">
-    <button class="skill-tab-btn active" onclick="filterSkills('all', event)">All</button>
-    <button class="skill-tab-btn" onclick="filterSkills('language', event)">Language</button>
-    <button class="skill-tab-btn" onclick="filterSkills('frontend', event)">Frontend</button>
-    <button class="skill-tab-btn" onclick="filterSkills('backend', event)">Backend</button>
-    <button class="skill-tab-btn" onclick="filterSkills('database', event)">Database</button>
-    <button class="skill-tab-btn" onclick="filterSkills('tools', event)">Tools</button>
-  </div>
-
-  <div class="skill-icons all-skills">
-    <!-- Language -->
-    <div class="skill-icon-item language">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><p>Java</p>
-    </div>
-    <div class="skill-icon-item language">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"><p>C</p>
-    </div>
-    <div class="skill-icon-item language">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><p>Python</p>
+    <div class="skill-tabs">
+      <button class="skill-tab-btn active" onclick="filterSkills('all', event)">All</button>
+      <button class="skill-tab-btn" onclick="filterSkills('language', event)">Language</button>
+      <button class="skill-tab-btn" onclick="filterSkills('frontend', event)">Frontend</button>
+      <button class="skill-tab-btn" onclick="filterSkills('backend', event)">Backend</button>
+      <button class="skill-tab-btn" onclick="filterSkills('database', event)">Database</button>
+      <button class="skill-tab-btn" onclick="filterSkills('tools', event)">Tools</button>
     </div>
 
-    <!-- Frontend -->
-    <div class="skill-icon-item frontend">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"><p>HTML</p>
-    </div>
-    <div class="skill-icon-item frontend">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"><p>CSS</p>
-    </div>
-    <div class="skill-icon-item frontend">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><p>JavaScript</p>
-    </div>
-    <div class="skill-icon-item frontend">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><p>React</p>
-    </div>
+    <div class="skill-icons all-skills">
+      <!-- Language -->
+      <div class="skill-icon-item language">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+        <p>Java</p>
+      </div>
+      <div class="skill-icon-item language">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+        <p>C</p>
+      </div>
+      <div class="skill-icon-item language">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+        <p>Python</p>
+      </div>
 
-    <!-- Backend -->
-    <div class="skill-icon-item backend">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"><p>Node.js</p>
-    </div>
-    <div class="skill-icon-item backend">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express"><p>Express</p>
-    </div>
+      <!-- Frontend -->
+      <div class="skill-icon-item frontend">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+        <p>HTML</p>
+      </div>
+      <div class="skill-icon-item frontend">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+        <p>CSS</p>
+      </div>
+      <div class="skill-icon-item frontend">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          alt="JavaScript">
+        <p>JavaScript</p>
+      </div>
+      <div class="skill-icon-item frontend">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+        <p>React</p>
+      </div>
 
-    <!-- Database -->
-    <div class="skill-icon-item database">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><p>MySQL</p>
+      <!-- Backend -->
+      <div class="skill-icon-item backend">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+        <p>Node.js</p>
+      </div>
+      <div class="skill-icon-item backend">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express">
+        <p>Express</p>
+      </div>
+
+      <!-- Database -->
+      <div class="skill-icon-item database">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+        <p>MySQL</p>
+      </div>
+      <div class="skill-icon-item database">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+        <p>MongoDB</p>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-icon-item tools">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+        <p>Git</p>
+      </div>
+      <div class="skill-icon-item tools">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+        <p>VS Code</p>
+      </div>
+      <div class="skill-icon-item tools">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+        <p>Figma</p>
+      </div>
     </div>
-    <div class="skill-icon-item database">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"><p>MongoDB</p>
-    </div>
-
-    <!-- Tools -->
-    <div class="skill-icon-item tools">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><p>Git</p>
-    </div>
-    <div class="skill-icon-item tools">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"><p>VS Code</p>
-    </div>
-    <div class="skill-icon-item tools">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"><p>Figma</p>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
-<section class="projects" id="projects">
-  <h2 class="section-title">My <span>Projects</span></h2>
+  <section class="projects" id="projects">
+    <h2 class="section-title">My <span>Projects</span></h2>
 
-  <!-- Swiper Container -->
-  <div class="swiper projectSwiper">
-    <div class="swiper-wrapper">
+    <!-- Swiper Container -->
+    <div class="swiper projectSwiper">
+      <div class="swiper-wrapper">
 
-      <!-- Project Slide 1 -->
-      <div class="swiper-slide">
-        <div class="project-card">
-          <img src="images/pantry.jpg" alt="Project 1">
-          <div class="project-content">
-            <h3>Pantry Tracker</h3>
-            <div class="project-desc">
-              <p>A smart web app to manage pantry items with expiry alerts and Firebase integration.<br>
-              <strong>Techstack</strong> HTML,CSS,Javascript,Firebase</p>
-              
+        <!-- Project Slide 1 -->
+        <div class="swiper-slide">
+          <div class="project-card">
+            <img src="images/pantry.jpg" alt="Project 1">
+            <div class="project-content">
+              <h3>Pantry Tracker</h3>
+              <div class="project-desc">
+                <p>A smart web app to manage pantry items with expiry alerts and Firebase integration.<br>
+                  <strong>Techstack</strong> HTML,CSS,Javascript,Firebase
+                </p>
+
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Project Slide 2 -->
-      <div class="swiper-slide">
-        <div class="project-card">
-          <img src="images/NEC.png" alt="Project 2">
-          <div class="project-content">
-            <h3>Placement System</h3>
-            <div class="project-desc">
-              Institutional data management system for tracking placement stats and analytics.
+        <!-- Project Slide 2 -->
+        <div class="swiper-slide">
+          <div class="project-card">
+            <img src="images/NEC.png" alt="Project 2">
+            <div class="project-content">
+              <h3>Placement System</h3>
+              <div class="project-desc">
+                Institutional data management system for tracking placement stats and analytics.
+              </div>
             </div>
           </div>
         </div>
+
       </div>
 
+      <!-- Swiper navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
-
-    <!-- Swiper navigation buttons -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</section>
+  </section>
 
 
-<section class="contact" id="contact">
-  <h2 class="section-title">Get in <span>Touch</span></h2>
-  
-  <div class="contact-container">
-    <div class="contact-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/535/535239.png" alt="Location Icon">
-      <p>Tamil Nadu, India</p>
+  <section class="contact" id="contact">
+    <h2 class="section-title">Get in <span>Touch</span></h2>
+
+    <div class="contact-container">
+      <div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/535/535239.png" alt="Location Icon">
+        <p>Tamil Nadu, India</p>
+      </div>
+
+      <div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon">
+        <a href="mailto:mk3207587@gmail.com">mk3207587@gmail.com</a>
+      </div>
+
+      <div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon">
+        <a href="https://www.linkedin.com/in/sankareswari" target="_blank">linkedin.com/in/sankareswari</a>
+      </div>
+
+      <div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Icon">
+        <a href="https://github.com/SANKARESWARI-M" target="_blank">github.com/SANKARESWARI-M</a>
+      </div>
     </div>
-
-    <div class="contact-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon">
-      <a href="mailto:mk3207587@gmail.com">mk3207587@gmail.com</a>
-    </div>
-
-    <div class="contact-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon">
-      <a href="https://www.linkedin.com/in/sankareswari" target="_blank">linkedin.com/in/sankareswari</a>
-    </div>
-
-    <div class="contact-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Icon">
-      <a href="https://github.com/SANKARESWARI-M" target="_blank">github.com/SANKARESWARI-M</a>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
