@@ -694,16 +694,25 @@ body{
 }
 
 
+
+
+
+
+
+
+
 @media (max-width: 480px) {
 
-   .header {
-    justify-content: space-between;
-  }
-
-  .hamburger {
-    display: block;
-    z-index: 101;
-  }
+ .hamburger {
+  display: block;
+  position: absolute; /* Make it float over content */
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  z-index: 102; /* Ensure it appears above other content */
+}
 
   .navbar {
     position: fixed;
@@ -717,18 +726,28 @@ body{
     align-items: flex-start;
     padding: 20px;
     transition: right 0.3s ease-in-out;
-    z-index: 100;
+    z-index: 101;
+    display: none; /* Default hidden */
   }
 
   .navbar.active {
     right: 0;
+    display: flex; /* Show when active */
   }
 
   .navbar a {
-    margin: 15px 0;
     font-size: 18px;
     color: white;
     text-decoration: none;
+    margin-bottom: 15px;
+  }
+
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 10px;
   }
 
   .home {
