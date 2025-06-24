@@ -686,7 +686,6 @@ body{
 }
 
 
-
 .hamburger {
   display: none;
   font-size: 28px;
@@ -703,27 +702,55 @@ body{
 
   .hamburger {
     display: block;
+    z-index: 101;
   }
 
   .navbar {
-    display: none;
-    flex-direction: column;
-    background-color: rgb(31, 95, 197);
-    position: absolute;
+    position: fixed;
     top: 80px;
-    right: 0;
-    width: 60%;
+    right: -100%;
+    width: 200px;
+    height: 100vh;
+    background-color: rgb(31, 95, 197);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 20px;
-    z-index: 999;
+    transition: right 0.3s ease-in-out;
+    z-index: 100;
   }
 
   .navbar.active {
-    display: flex;
+    right: 0;
   }
 
   .navbar a {
-    margin: 10px 0;
+    margin: 15px 0;
     font-size: 18px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  .home-content {
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  .logo-corner {
+    width: 180px;
+    height: 180px;
+  }
+
+  .logo-corner img {
+    width: 100%;
+    height: 100%;
   }
 
   .home {
