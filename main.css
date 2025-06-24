@@ -703,81 +703,61 @@ body{
 
 @media (max-width: 480px) {
 
- .hamburger {
-  display: block;
-  position: absolute; /* Make it float over content */
-  top: 20px;
-  right: 20px;
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
-  z-index: 102; /* Ensure it appears above other content */
-}
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    background-color: rgb(31, 95, 197);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 101;
+  }
 
   .navbar {
     position: fixed;
-    top: 80px;
-    right: -100%;
+    top: 60px;
+    right: -220px;
     width: 200px;
     height: 100vh;
     background-color: rgb(31, 95, 197);
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     padding: 20px;
     transition: right 0.3s ease-in-out;
-    z-index: 101;
-    display: none; /* Default hidden */
+    z-index: 99;
   }
 
   .navbar.active {
     right: 0;
-    display: flex; /* Show when active */
   }
 
   .navbar a {
-    font-size: 18px;
     color: white;
     text-decoration: none;
-    margin-bottom: 15px;
+    margin: 15px 0;
+    font-size: 18px;
   }
 
-  .header {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    padding: 0 10px;
-  }
-
+  /* Home Section Fix */
   .home {
+    margin-top: 80px;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 120px;
-  }
-
-  .home-content {
-    margin: 0;
-    padding: 0 20px;
-  }
-
-  .logo-corner {
-    width: 180px;
-    height: 180px;
-  }
-
-  .logo-corner img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .home {
-    flex-direction: column;
-    padding-top: 120px;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
+    padding: 20px;
     height: auto;
   }
 
@@ -790,7 +770,7 @@ body{
   .home-content h1,
   .home-content h3,
   .home-content .greet {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .home-content p {
@@ -804,59 +784,15 @@ body{
   .logo-corner {
     width: 180px;
     height: 180px;
+    margin: 20px auto;
   }
 
   .logo-corner img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 
-  /* Header and Navbar */
-  .header {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 5%;
-    height: auto;
-  }
-
-  .navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .navbar a {
-    font-size: 18px;
-    margin: 5px 0;
-    display: block;
-  }
-
-  /* Home Section */
-  .home {
-    flex-direction: column;
-    padding: 60px 5% 40px;
-    height: auto;
-    text-align: center;
-    gap: 30px;
-  }
-
-  .home-content {
-    margin-left: 0;
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  .home-content h1,
-  .home-content h3,
-  .home-content .greet {
-    font-size: 26px;
-  }
-
-  .home-content p {
-    font-size: 14px;
-  }
 
   .typewriter {
     font-size: 20px;
